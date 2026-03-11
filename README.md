@@ -32,14 +32,23 @@ Located in the `analysis/` directory, the pipeline follows these steps:
 ## Project Structure
 ```text
 YeastAnalysis/
-├── analysis/               # R analysis scripts
-│   ├── .RData/             # Saved R objects (Processed counts, DGE, Enrichment)
-│   ├── 00_lib_install.R    # Dependency installation
-│   └── ...                 # Sequential analysis scripts
-├── multiqc_*.md            # MultiQC summary logs
-├── scripts.md              # Helper bash/R scripts for automation
-├── _main_OverviewYeast.md  # Detailed lab notes and background
-└── README.md               # Project documentation
+├── analysis/                 # Downstream R analysis pipeline
+│   ├── .RData/               # Saved intermediate analysis objects
+│   │   ├── 01_processed_counts.RData
+│   │   ├── 02_deseq_results.RData
+│   │   └── 03_enrichment_results.RData
+│   ├── 00_lib_install.R      # Dependency management script
+│   ├── 01_data_prep.R        # Data loading and cleaning
+│   ├── 02_deseq2_dge.R       # Differential Gene Expression analysis
+│   ├── 03_enrichment.R       # GO and pathway enrichment analysis
+│   ├── 04_visualization.R    # PCA, Heatmaps, and Volcano plots
+│   └── 05_summary.R          # Markdown report generation script
+├── multiqc_STAR.md           # MultiQC alignment summary
+├── multiqc_fastqc.md         # MultiQC raw data quality summary
+├── multiqc_rseqc.md          # MultiQC mapping and coverage summary
+├── scripts.md                # Compilation of automation and helper scripts
+├── _main_OverviewYeast.md    # Master lab notes, upstream processing & context
+└── README.md                 # Project documentation and entry point
 ```
 
 ## Setup and Dependencies
