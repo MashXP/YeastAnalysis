@@ -1,0 +1,8 @@
+pdf("/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/rseqc/ERR458497/junction_annotation/ERR458497.splice_events.pdf")
+events=c(0.08313934153641503,4.738942467575657,95.1114067176588)
+pie(events,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing events",labels=c("partial_novel 0%","complete_novel 5%","known 95%"))
+dev.off()
+pdf("/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/rseqc/ERR458497/junction_annotation/ERR458497.splice_junction.pdf")
+junction=c(1.466275659824047,43.6950146627566,54.83870967741935)
+pie(junction,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing junctions",labels=c("partial_novel 1%","complete_novel 44%","known 55%"))
+dev.off()

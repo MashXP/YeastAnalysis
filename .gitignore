@@ -1,0 +1,29 @@
+# Ignore heavy bioinformatics data files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.sra
+*.vcf
+*.vcf.gz
+
+# Ignore large genome index files
+_data/ensembl/yeast_index/Genome
+_data/ensembl/yeast_index/SA
+_data/ensembl/yeast_index/SAindex
+
+# Keep directories but ignore contents if they are just large data
+# (Handled by the extensions above)
+
+# Allow scripts and small metadata even in data folders
+!_data/_scripts/*
+!**/*.R
+!**/*.py
+!**/*.sh
+!**/*.md
+!**/*.txt
+!**/*.csv
+!**/*.RData
+!**/.gitignore

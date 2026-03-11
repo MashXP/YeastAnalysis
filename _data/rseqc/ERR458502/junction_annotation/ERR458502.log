@@ -1,0 +1,18 @@
+Reading reference bed file:  /home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/ensembl/Saccharomyces_cerevisiae.R64-1-1.62.bed  ...  Done
+Load BAM file ...  Done
+
+===================================================================
+Total splicing  Events:	13368
+Known Splicing Events:	12670
+Partial Novel Splicing Events:	19
+Novel Splicing Events:	673
+Filtered Splicing Events:	6
+
+Total splicing  Junctions:	544
+Known Splicing Junctions:	221
+Partial Novel Splicing Junctions:	16
+Novel Splicing Junctions:	307
+
+===================================================================
+Create BED file ...
+Create Interact file ...

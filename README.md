@@ -33,24 +33,29 @@ Located in the `analysis/` directory, the pipeline follows these steps:
 ## Project Structure
 ```text
 YeastAnalysis/
+├── _data/                    # Raw and intermediate data (ignored if large)
+│   ├── _scripts/             # Upstream automation scripts (bash/python)
+│   ├── bam/                  # Sorted BAM files
+│   ├── counts/               # Raw count matrices
+│   ├── ensembl/              # Reference genome and STAR index
+│   ├── fastq/                # Extracted raw reads
+│   ├── raw.sra/              # Compressed SRA archives
+│   ├── rseqc/                # Quality control results (RSeQC)
+│   └── STAR_aligned_output/  # Intermediate alignment SAM files
 ├── analysis/                 # Downstream R analysis pipeline
 │   ├── .RData/               # Saved intermediate analysis objects
-│   │   ├── 01_processed_counts.RData
-│   │   ├── 02_deseq_results.RData
-│   │   └── 03_enrichment_results.RData
-│   ├── 00_lib_install.R      # Dependency management script
-│   ├── 01_data_prep.R        # Data loading and cleaning
-│   ├── 02_deseq2_dge.R       # Differential Gene Expression analysis
-│   ├── 03_enrichment.R       # GO and pathway enrichment analysis
-│   ├── 04_visualization.R    # PCA, Heatmaps, and Volcano plots
-│   └── 05_summary.R          # Markdown report generation script
-├── multiqc_STAR.md           # MultiQC alignment summary
-├── multiqc_fastqc.md         # MultiQC raw data quality summary
-├── multiqc_rseqc.md          # MultiQC mapping and coverage summary
-├── scripts.md                # Compilation of automation and helper scripts
-├── _main_OverviewYeast.md    # Master lab notes, upstream processing & context
+...
 └── README.md                 # Project documentation and entry point
 ```
+
+## Large Data Policy
+To keep the repository lightweight, heavy bioinformatics data files are excluded from version control via `.gitignore`.
+
+### Ignored Files & Regeneration
+- **Raw Data (`raw.sra/`, `fastq/`)**: Original `.sra` and `.fastq` files (PRJEB5348).
+- **Genome Index (`ensembl/yeast_index/`)**: STAR index files (`Genome`, `SA`, `SAindex`).
+- **Alignments (`STAR_aligned_output/`, `bam/`)**: Intermediate `.sam` and final sorted `.bam`/`.bai` files.
+    - *Regeneration*: BAM files can be recreated using `_data/_scripts/SAMtoBAM.sh`.
 
 ## Setup and Dependencies
 To reproduce the analysis, ensure you have R installed. You can install all required CRAN and Bioconductor packages by running the provided installation script:

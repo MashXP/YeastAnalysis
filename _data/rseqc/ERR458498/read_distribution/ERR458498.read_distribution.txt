@@ -1,0 +1,16 @@
+Total Reads                   816824
+Total Tags                    824595
+Total Assigned Tags           780652
+=====================================================================
+Group               Total_bases         Tag_count           Tags/Kb             
+CDS_Exons           8911811             780188              87.55             
+5'UTR_Exons         0                   0                   0.00              
+3'UTR_Exons         0                   0                   0.00              
+Introns             69304               410                 5.92              
+TSS_up_1kb          2491133             3                   0.00              
+TSS_up_5kb          3178158             3                   0.00              
+TSS_up_10kb         3305034             3                   0.00              
+TES_down_1kb        2132442             51                  0.02              
+TES_down_5kb        3149750             51                  0.02              
+TES_down_10kb       3312985             51                  0.02              
+=====================================================================

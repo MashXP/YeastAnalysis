@@ -1,0 +1,15 @@
+Status	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458497_sorted.bam	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458498_sorted.bam	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458499_sorted.bam	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458500_sorted.bam	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458501_sorted.bam	/home/mashxp/Documents/MyVault/Atlas/LuuLoi_RNA-seq_course/exercise/_data/bam/ERR458502_sorted.bam
+Assigned	650961	654494	840244	1481275	1469044	1456397
+Unassigned_Unmapped	0	0	0	0	0	0
+Unassigned_Read_Type	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0
+Unassigned_MultiMapping	188712	190432	245988	317071	316512	313041
+Unassigned_Secondary	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0
+Unassigned_NoFeatures	27763	28215	35753	114478	114301	113128
+Unassigned_Overlapping_Length	0	0	0	0	0	0
+Unassigned_Ambiguity	46888	47287	60597	92144	90752	89850

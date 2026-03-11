@@ -1,0 +1,19 @@
+### /home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2   --runMode genomeGenerate      --genomeDir ./yeast_index   --genomeFastaFiles ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa      --genomeSAindexNbases 10   --sjdbGTFfile ./Saccharomyces_cerevisiae.R64-1-1.62.gtf   --sjdbOverhang 50
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa 
+genomeSAindexNbases	10
+genomeChrBinNbits	18
+genomeSAsparseD	1
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	50
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	./Saccharomyces_cerevisiae.R64-1-1.62.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	14716828 100596420

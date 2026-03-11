@@ -1,0 +1,108 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+##### Command Line:
+/home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2 --runMode genomeGenerate --genomeDir ./yeast_index --genomeFastaFiles ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa --sjdbGTFfile ./Saccharomyces_cerevisiae.R64-1-1.62.gtf --sjdbOverhang 50 --genomeSAindexNbases 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     ./yeast_index     ~RE-DEFINED
+genomeFastaFiles              ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa        ~RE-DEFINED
+sjdbGTFfile                   ./Saccharomyces_cerevisiae.R64-1-1.62.gtf     ~RE-DEFINED
+sjdbOverhang                  50     ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+genomeDir                         ./yeast_index
+genomeFastaFiles                  ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa   
+genomeSAindexNbases               10
+sjdbGTFfile                       ./Saccharomyces_cerevisiae.R64-1-1.62.gtf
+sjdbOverhang                      50
+
+-------------------------------
+##### Final effective command line:
+/home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2   --runMode genomeGenerate      --genomeDir ./yeast_index   --genomeFastaFiles ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa      --genomeSAindexNbases 10   --sjdbGTFfile ./Saccharomyces_cerevisiae.R64-1-1.62.gtf   --sjdbOverhang 50
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory created: ./yeast_index/
+Jan 18 12:08:13 ... starting to generate Genome files
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 0  "I" chrStart: 0
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 1  "II" chrStart: 262144
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 2  "III" chrStart: 1310720
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 3  "IV" chrStart: 1835008
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 4  "V" chrStart: 3407872
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 5  "VI" chrStart: 4194304
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 6  "VII" chrStart: 4718592
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 7  "VIII" chrStart: 6029312
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 8  "IX" chrStart: 6815744
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 9  "X" chrStart: 7340032
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 10  "XI" chrStart: 8126464
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 11  "XII" chrStart: 8912896
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 12  "XIII" chrStart: 10223616
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 13  "XIV" chrStart: 11272192
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 14  "XV" chrStart: 12058624
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 15  "XVI" chrStart: 13369344
+./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa : chr # 16  "Mito" chrStart: 14417920
+Chromosome sequence lengths: 
+I	230218
+II	813184
+III	316620
+IV	1531933
+V	576874
+VI	270161
+VII	1090940
+VIII	562643
+IX	439888
+X	745751
+XI	666816
+XII	1078177
+XIII	924431
+XIV	784333
+XV	1091291
+XVI	948066
+Mito	85779
+Genome sequence total length = 12157105
+Genome size with padding = 14680064
+Jan 18 12:08:13 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=./Saccharomyces_cerevisiae.R64-1-1.62.gtf, found:
+		7127 transcripts
+		7507 exons (non-collapsed)
+		364 collapsed junctions
+Total junctions: 364
+Jan 18 12:08:13 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=115680064 = 14680064 + 101000000
+GstrandBit=32
+Number of SA indices: 24314210
+Jan 18 12:08:13 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 1;   chunks size limit: 18582383800 bytes
+Jan 18 12:08:13 ... sorting Suffix Array chunks and saving them to disk...
+Writing 194513680 bytes into ./yeast_index//SA_0 ; empty space on disk = 180109733888 bytes ... done
+Jan 18 12:08:20 ... loading chunks from disk, packing SA...
+Jan 18 12:08:20 ... finished generating suffix array
+Jan 18 12:08:20 ... generating Suffix Array index
+Jan 18 12:08:21 ... completed Suffix Array index
+Jan 18 12:08:21   Finished preparing junctions
+Jan 18 12:08:21 ..... inserting junctions into the genome indices
+Jan 18 12:08:21   Finished SA search: number of new junctions=364, old junctions=0
+Jan 18 12:08:21   Finished sorting SA indicesL nInd=72800
+Genome size with junctions=14716828  14680064   36764
+GstrandBit1=32   GstrandBit=32
+Jan 18 12:08:21   Finished inserting junction indices
+Jan 18 12:08:21   Finished SAi
+Jan 18 12:08:21 ..... finished inserting junctions into genome
+Jan 18 12:08:21 ... writing Genome to disk ...
+Writing 14716828 bytes into ./yeast_index//Genome ; empty space on disk = 180109733888 bytes ... done
+SA size in bytes: 100596420
+Jan 18 12:08:21 ... writing Suffix Array to disk ...
+Writing 100596420 bytes into ./yeast_index//SA ; empty space on disk = 180109733888 bytes ... done
+Jan 18 12:08:21 ... writing SAindex to disk
+Writing 8 bytes into ./yeast_index//SAindex ; empty space on disk = 180109733888 bytes ... done
+Writing 88 bytes into ./yeast_index//SAindex ; empty space on disk = 180109733888 bytes ... done
+Writing 6116691 bytes into ./yeast_index//SAindex ; empty space on disk = 180109733888 bytes ... done
+Jan 18 12:08:21 ..... finished successfully
+DONE: Genome generation, EXITING

@@ -1,0 +1,91 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+##### Command Line:
+/home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2 --genomeDir ./ensembl/yeast_index --readFilesIn ./fastq/ERR458499.fastq --outFileNamePrefix ./STAR_aligned_output/ERR458499/ERR458499_
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 ./STAR_aligned_output/ERR458499/ERR458499_
+###### All USER parameters from Command Line:
+genomeDir                     ./ensembl/yeast_index     ~RE-DEFINED
+readFilesIn                   ./fastq/ERR458499.fastq        ~RE-DEFINED
+outFileNamePrefix             ./STAR_aligned_output/ERR458499/ERR458499_     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+genomeDir                         ./ensembl/yeast_index
+readFilesIn                       ./fastq/ERR458499.fastq   
+outFileNamePrefix                 ./STAR_aligned_output/ERR458499/ERR458499_
+
+-------------------------------
+##### Final effective command line:
+/home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2   --genomeDir ./ensembl/yeast_index   --readFilesIn ./fastq/ERR458499.fastq      --outFileNamePrefix ./STAR_aligned_output/ERR458499/ERR458499_
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /home/mashxp/.conda/envs/yeast_rnaseq/bin/STAR-avx2   --runMode genomeGenerate      --genomeDir ./yeast_index   --genomeFastaFiles ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa      --genomeSAindexNbases 10   --sjdbGTFfile ./Saccharomyces_cerevisiae.R64-1-1.62.gtf   --sjdbOverhang 50
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              ./Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa        ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  50     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   ./Saccharomyces_cerevisiae.R64-1-1.62.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               14716828   100596420        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 17
+1	I	230218	0
+2	II	813184	262144
+3	III	316620	1310720
+4	IV	1531933	1835008
+5	V	576874	3407872
+6	VI	270161	4194304
+7	VII	1090940	4718592
+8	VIII	562643	6029312
+9	IX	439888	6815744
+10	X	745751	7340032
+11	XI	666816	8126464
+12	XII	1078177	8912896
+13	XIII	924431	10223616
+14	XIV	784333	11272192
+15	XV	1091291	12058624
+16	XVI	948066	13369344
+17	Mito	85779	14417920
+--sjdbOverhang = 50 taken from the generated genome
+Started loading the genome: Sun Jan 18 12:53:27 2026
+
+Genome: size given as a parameter = 14716828
+SA: size given as a parameter = 100596420
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=10  nSAi=1398100
+nGenome=14716828;  nSAbyte=100596420
+GstrandBit=32   SA number of indices=24387010
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 14716828 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 14716828 bytes
+SA file size: 100596420 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 100596420 bytes
+Loading SAindex ... done: 6116787 bytes
+Finished loading the genome: Sun Jan 18 12:53:27 2026
+
+Processing splice junctions database sjdbN=364,   pGe.sjdbOverhang=50 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Thread #0 end of input stream, nextChar=-1
+Completed: thread #0
+Jan 18 12:53:47 ..... finished mapping
+RAM after mapping:
+VmPeak:	  280272 kB; VmSize:	  280016 kB; VmHWM:	  274524 kB; VmRSS:	  274276 kB; 
+RAM after freeing genome index memory:
+VmPeak:	  280272 kB; VmSize:	  161424 kB; VmHWM:	  274524 kB; VmRSS:	  155692 kB; 
+ALL DONE!
