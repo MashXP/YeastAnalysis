@@ -8,6 +8,7 @@ This repository contains the downstream analysis pipeline for an RNA-seq experim
 ## Overview
 The goal of this study is to identify differentially expressed genes (DEGs) and enriched biological pathways associated with the loss of the **Snf2** chromatin remodeling factor.
 
+- **Project Start Date:** 2026-01-17
 - **Organism:** *Saccharomyces cerevisiae*
 - **Accession:** [PRJEB5348](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJEB5348)
 - **Experimental Design:** 3 replicates of Wild Type vs. 3 replicates of *snf2* mutant.
