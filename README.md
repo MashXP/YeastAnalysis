@@ -33,19 +33,56 @@ Located in the `analysis/` directory, the pipeline follows these steps:
 ## Project Structure
 ```text
 YeastAnalysis/
-├── _data/                    # Raw and intermediate data (ignored if large)
-│   ├── _scripts/             # Upstream automation scripts (bash/python)
-│   ├── bam/                  # Sorted BAM files
-│   ├── counts/               # Raw count matrices
-│   ├── ensembl/              # Reference genome and STAR index
-│   ├── fastq/                # Extracted raw reads
-│   ├── raw.sra/              # Compressed SRA archives
-│   ├── rseqc/                # Quality control results (RSeQC)
-│   └── STAR_aligned_output/  # Intermediate alignment SAM files
-├── analysis/                 # Downstream R analysis pipeline
-│   ├── .RData/               # Saved intermediate analysis objects
-...
-└── README.md                 # Project documentation and entry point
+├── _data/                               # Raw, intermediate, and QC data (Git ignored)
+│   ├── _scripts/                        # Upstream automation scripts
+│   │   ├── biotype_to_multiqc.py         # Converts featureCounts output for MultiQC
+│   │   ├── create_downstream_env.sh      # Sets up R/Bioconductor environment
+│   │   ├── create_upstream_env.sh        # Sets up Conda environment for QC/Alignment
+│   │   ├── gtf2bed.py                    # Converts GTF to BED12 for RSeQC
+│   │   ├── quantification_featureCounts_auto.sh # Automates read counting
+│   │   ├── rseqc_analysis_auto.sh        # Automates RSeQC suite
+│   │   ├── SAMtoBAM.sh                   # Converts/sorts SAM to BAM
+│   │   ├── STAR_alignment_auto.sh        # Automates STAR mapping
+│   │   └── vsc_r_setup.sh                # Environment setup for VSC
+│   ├── bam/                             # Sorted and indexed BAM files
+│   │   ├── ERR458497_sorted.bam(.bai) ... ERR458502_sorted.bam(.bai)
+│   ├── counts/                          # Raw count matrices
+│   │   ├── gene_counts.txt              # Primary matrix for DGE
+│   │   ├── biotype_counts.txt           # Secondary matrix for biotype QC
+│   │   └── gene_counts.txt.summary      # featureCounts mapping summary
+│   ├── ensembl/                         # Reference genome and annotation
+│   │   ├── Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa
+│   │   ├── Saccharomyces_cerevisiae.R64-1-1.62.gtf
+│   │   ├── Saccharomyces_cerevisiae.R64-1-1.62.bed (BED12 version)
+│   │   └── yeast_index/                 # STAR Index (Genome, SA, SAindex, etc.)
+│   ├── fastq/                           # Decompressed reads (ERR458497.fastq ...)
+│   ├── fastqc/                          # FastQC HTML/ZIP reports for each sample
+│   ├── multiqc_report_data/             # Aggregated MultiQC statistics
+│   ├── multiqc_report.html              # Final Master MultiQC report
+│   ├── rseqc/                           # RSeQC metrics (geneBodyCoverage, etc.)
+│   └── STAR_aligned_output/             # STAR log files and splice junction tables
+├── analysis/                            # Downstream R analysis pipeline
+│   ├── .RData/                          # Saved R analysis objects
+│   │   ├── 01_processed_counts.RData
+│   │   ├── 02_deseq_results.RData
+│   │   └── 03_enrichment_results.RData
+│   ├── 00_lib_install.R                 # Dependency installer
+│   ├── 01_data_prep.R                   # Data cleaning/filtering
+│   ├── 02_deseq2_dge.R                  # Differential expression
+│   ├── 03_enrichment.R                  # Functional enrichment
+│   ├── 04_visualization.R               # Figure generation
+│   └── 05_summary.R                     # Results aggregation
+├── results/                             # Final Analysis Outputs
+│   ├── figures/                         # PCA, Volcano, MA, Heatmap plots
+│   ├── summary/                         # Step-by-step markdown summaries
+│   └── tables/                          # Exported CSVs (DGE, GO, GSEA results)
+├── _main_OverviewYeast.md               # Initial project notes and CLI logs
+├── multiqc_fastqc.md                    # Detailed FastQC summary and interpretation
+├── multiqc_rseqc.md                    # Detailed RSeQC summary and interpretation
+├── multiqc_STAR.md                     # Detailed STAR alignment summary
+├── scripts.md                           # Documentation for automation scripts
+├── .Rprofile                            # R project-specific configuration
+└── README.md                            # Project documentation and entry point
 ```
 
 ## Large Data Policy
@@ -81,7 +118,3 @@ Initial results from the *snf2* mutant vs. Wild Type comparison show significant
 - **Top Enriched Pathways:** Oxoacid metabolic process, Organic acid metabolic process, and Ribosome biogenesis.
 
 For a detailed breakdown, refer to the generated summaries in `results/summary/` (after running `analysis/05_summary.R`).
-
-## TODO
-- [ ] **Data Visualization:** Ensure all figures in `results/figures/` are correctly linked and documented.
-- [ ] **Biological Interpretation:** Add context to the enriched pathways in a final discussion section.
